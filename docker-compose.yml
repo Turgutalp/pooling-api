@@ -1,0 +1,19 @@
+version: '3'
+services:
+  app:
+    build: .
+    container_name: pooling-prime-app
+    ports:
+      - '${PORT}:${PORT}'
+    environment:
+      - PORT=${PORT}
+      - HOST=${HOST}
+      - PRIME_LIMIT=${PRIME_LIMIT}
+      - CLIENT_COUNT=${CLIENT_COUNT}
+      - PRIME_INTERVAL=${PRIME_INTERVAL}
+      - USE_ROUND_ROBIN=${USE_ROUND_ROBIN}
+      - VARY_CLIENT_SPEEDS=${VARY_CLIENT_SPEEDS}
+      - MIN_CLIENT_INTERVAL=${MIN_CLIENT_INTERVAL}
+      - MAX_CLIENT_INTERVAL=${MAX_CLIENT_INTERVAL}
+      - CLIENT_RETRY_COUNT=${CLIENT_RETRY_COUNT}
+      - CLIENT_PING_INTERVAL=${CLIENT_PING_INTERVAL}
